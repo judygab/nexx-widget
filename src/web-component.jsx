@@ -2,7 +2,7 @@ import ReactDom from "react-dom/client";
 import { Widget } from "./components/Widget";
 
 export const normalizeAttribute = (attribute) => {
-  return attribute.repl(/-([a-z])/g, (_, letter) => letter.toUpperCase());
+  return attribute.replace(/-([a-z])/g, (_, letter) => letter.toUpperCase());
 };
 
 class WidgetWebComponent extends HTMLElement {
